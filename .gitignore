@@ -1,0 +1,5 @@
+node_modules/
+.venv/
+.DS_Store
+data/*.json
+!data/config.json

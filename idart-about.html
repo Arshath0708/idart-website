@@ -1,0 +1,202 @@
+//about
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | iDart Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/premium-home.css" />
+  <style>
+    .about-story-section { padding: 5rem 0; border-bottom: 1px solid var(--glass-border); }
+    .about-story-section:last-child { border-bottom: none; }
+    .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .cto-card { display: flex; gap: 3rem; align-items: center; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 24px; padding: 3rem; margin-top: 3rem; }
+    .cto-img-wrapper { width: 300px; height: 350px; flex-shrink: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); position: relative; }
+    .cto-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+    .cto-img-wrapper::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 15, 22, 0.8), transparent); }
+    .why-us-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .why-us-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; }
+    .why-us-card h4 { color: var(--accent-secondary); font-size: 1.1rem; margin-bottom: 1rem; }
+    @media (max-width: 900px) {
+      .vision-mission-grid { grid-template-columns: 1fr; }
+      .cto-card { flex-direction: column; text-align: center; padding: 2rem; }
+      .cto-img-wrapper { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge glass-badge">FOUNDED 2009 · COIMBATORE, INDIA</div>
+        <h1 class="hero-title">We Engineer Technology That <span class="text-gradient">Moves Businesses Forward.</span></h1>
+        <p class="hero-subtitle">iDart Technologies was built on one belief — every business in India, regardless of size, deserves access to world-class technology.</p>
+        <div class="hero-actions reveal-up delay-200">
+          <a class="btn btn-primary-glow" href="idart-contact.html">Work With Us</a>
+          <a class="btn btn-outline-glass" href="#story">Our Story</a>
+        </div>
+        
+        <div class="hero-metrics mt-12 reveal-up delay-300">
+          <div class="metric">
+            <span class="metric-val">1187+</span>
+            <span class="metric-label">Projects Delivered</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">99+</span>
+            <span class="metric-label">Happy Clients</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">18</span>
+            <span class="metric-label">States Reached</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">2009</span>
+            <span class="metric-label">Established</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrapper" style="border:none; background:transparent;">
+      <div class="marquee">
+        <span>Coimbatore HQ ✦ Founded 2009 ✦ 1187+ Projects ✦ 99+ Clients ✦ 18+ States ✦ Full-Stack Tech ✦ Web · Mobile ✦ ERP · CRM ✦ IoT · AI ✦ 24h Response ✦</span>
+        <span>Coimbatore HQ ✦ Founded 2009 ✦ 1187+ Projects ✦ 99+ Clients ✦ 18+ States ✦ Full-Stack Tech ✦ Web · Mobile ✦ ERP · CRM ✦ IoT · AI ✦ 24h Response ✦</span>
+      </div>
+    </div>
+
+    <!-- WHO WE ARE -->
+    <section id="story" class="about-story-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">WHO WE ARE</span>
+          <h2 class="section-title">Complete Technology <span class="text-gradient">Solutions</span>, Built for India.</h2>
+          <p class="section-desc">Since 2009, we have been engineering software, mobile applications, ERP systems, and AI-powered solutions from our headquarters in Coimbatore, Tamil Nadu.</p>
+          
+          <div class="mt-8 grid-2 reveal-up delay-100">
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Full-Stack Capability</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Deep Industry Experience</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Post-Launch Support</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>India-First Systems</span></div>
+          </div>
+          <a href="idart-services.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Explore Our Services</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Partnership Over Vendor</h3>
+             <p class="mt-4 text-muted">We understand your industry and workflow before we write a single line of code.</p>
+             <div class="stats-row mt-6">
+                <div class="stat-box" style="padding:0.8rem"><b>99%</b><span>Satisfaction</span></div>
+                <div class="stat-box" style="padding:0.8rem"><b>GST</b><span>Ready</span></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="about-story-section relative reveal-up">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">OUR PURPOSE</span>
+        <h2 class="section-title">The Vision & Mission Behind <span class="text-gradient">Everything.</span></h2>
+      </div>
+      <div class="vision-mission-grid">
+        <div class="glass-card reveal-up">
+          <span class="section-eyebrow">OUR VISION</span>
+          <h3>Technology for Every Business.</h3>
+          <p class="mt-4 text-muted">We envision an India where every small business, manufacturer, and entrepreneur has access to the same calibre of technology that powers global giants.</p>
+        </div>
+        <div class="glass-card reveal-up delay-100">
+          <span class="section-eyebrow">OUR MISSION</span>
+          <h3>Scalable Solutions That Grow.</h3>
+          <p class="mt-4 text-muted">Building technology that doesn't just solve today's problems — it scales as you grow, delivering measurable returns for years to come.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTO STORY -->
+    <section class="about-story-section relative reveal-up">
+      <div class="section-header reveal-up">
+        <span class="section-eyebrow">CTO STORY</span>
+        <h2 class="section-title">Built From a Problem <br/> We Experienced <span class="text-gradient">Firsthand.</span></h2>
+      </div>
+      <div class="cto-card reveal-up delay-100">
+        <div class="cto-img-wrapper">
+          <img src="assets/cto.jpg" alt="Mr. Radha Krishnan.K" />
+        </div>
+        <div class="cto-info">
+          <h3 class="text-gradient">Mr. Radha Krishnan.K</h3>
+          <p class="section-eyebrow">CTO · Idart Technologies</p>
+          <p class="mt-6 text-muted" style="font-style: italic; font-size: 1.1rem; line-height: 1.6;">
+            "I didn't start iDart to build websites. I started it to solve real business problems with technology — and to make that level of quality accessible to every business owner in India, not just the ones with big budgets."
+          </p>
+          <div class="stats-row mt-8" style="justify-content: flex-start; gap: 3rem;">
+             <div class="stat"><b>1187+</b><span>Projects Led</span></div>
+             <div class="stat"><b>18</b><span>States Reached</span></div>
+             <div class="stat"><b>44+</b><span>Team & Partners</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="about-story-section relative reveal-up">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">WHY CHOOSE US</span>
+        <h2 class="section-title">What Makes <span class="text-gradient">iDart</span> Different.</h2>
+      </div>
+      <div class="why-us-grid mt-12">
+        <div class="why-us-card reveal-up">
+          <h4>Business-First Thinking</h4>
+          <p class="text-sm text-muted">We ask what business problem you need to solve. Every technical decision flows from your commercial goals.</p>
+        </div>
+        <div class="why-us-card reveal-up delay-100">
+          <h4>Built for India</h4>
+          <p class="text-sm text-muted">GST compliance, UPI flows, and offline-capable apps for low-bandwidth areas — engineered for how India operates.</p>
+        </div>
+        <div class="why-us-card reveal-up delay-200">
+          <h4>End-to-End Ownership</h4>
+          <p class="text-sm text-muted">One team. One point of contact. From discovery to long-term maintenance — we own the entire journey.</p>
+        </div>
+        <div class="why-us-card reveal-up">
+          <h4>Real Post-Launch Support</h4>
+          <p class="text-sm text-muted">Direct WhatsApp line to your engineer, 99.9% uptime monitoring and proactive security patches.</p>
+        </div>
+        <div class="why-us-card reveal-up delay-100">
+          <h4>Speed Without Compromise</h4>
+          <p class="text-sm text-muted">Websites in 2 weeks, apps in 6–10 weeks. Fast delivery without cutting corners on quality.</p>
+        </div>
+        <div class="why-us-card reveal-up delay-200">
+          <h4>Transparent Pricing</h4>
+          <p class="text-sm text-muted">No surprise invoices or hidden charges. Fixed-price breakdowns and clear milestone schedules.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section mt-32 mb-32 relative reveal-up">
+      <div class="glass-card text-center relative overflow-hidden">
+        <h2 class="section-title">Ready to Build Something <span class="text-gradient">Great Together?</span></h2>
+        <p class="section-desc mx-auto mt-4 mb-8">Tell us about your project and we'll come back within 24 hours with a tailored proposal.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="idart-contact.html" class="btn btn-primary-glow btn-lg">Start a Project</a>
+          <a href="idart-services.html" class="btn btn-outline-glass btn-lg">Explore Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/components.js"></script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>

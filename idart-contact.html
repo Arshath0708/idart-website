@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | iDart Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/premium-home.css" />
+  <style>
+    .contact-method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .contact-method-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; transition: transform 0.3s ease; }
+    .contact-method-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
+    .contact-method-card h3 { color: var(--accent-secondary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .faq-section { padding: 5rem 0; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .faq-item { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1.5rem; }
+    .faq-item h4 { color: var(--text-primary); margin-bottom: 0.8rem; font-size: 1rem; }
+    .office-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .office-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1.5rem; }
+    .office-card h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); margin-bottom: 0.5rem; }
+    .office-card address { font-style: normal; font-size: 0.85rem; color: #a6b3d1; line-height: 1.5; }
+    @media (max-width: 900px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+  <!-- Navigation -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge glass-badge">WE RESPOND WITHIN 24 HOURS · MON – SAT</div>
+        <h1 class="hero-title">Let's Build Something <span class="text-gradient">Extraordinary Together.</span></h1>
+        <p class="hero-subtitle">Have a project in mind? A problem to solve? Or just want to explore what's possible for your business? Reach out — we'd love to hear from you.</p>
+        <div class="hero-actions reveal-up delay-200">
+          <a class="btn btn-primary-glow" href="#form">Send a Message</a>
+          <a class="btn btn-outline-glass" href="https://wa.me/919629964399">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrapper" style="border:none; background:transparent;">
+      <div class="marquee">
+        <span>Email Us ✦ Call Us ✦ WhatsApp Us ✦ Response in 24 Hours ✦ Coimbatore HQ ✦ Chennai Office ✦ Trichy Office ✦ Tirunelveli Office ✦ India-Wide Delivery ✦ Mon – Sat, 9AM – 7PM ✦</span>
+        <span>Email Us ✦ Call Us ✦ WhatsApp Us ✦ Response in 24 Hours ✦ Coimbatore HQ ✦ Chennai Office ✦ Trichy Office ✦ Tirunelveli Office ✦ India-Wide Delivery ✦ Mon – Sat, 9AM – 7PM ✦</span>
+      </div>
+    </div>
+
+    <!-- REACH US -->
+    <section class="mt-24 relative reveal-up">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">REACH US</span>
+        <h2 class="section-title">Four Ways to <span class="text-gradient">Get in Touch.</span></h2>
+        <p class="section-desc mx-auto">Pick the channel that suits you best. Every message is read by a real person on our team.</p>
+      </div>
+
+      <div class="contact-method-grid mt-12">
+        <div class="contact-method-card reveal-up">
+          <h3>EMAIL</h3>
+          <p class="text-sm text-muted mb-4">Best for detailed project briefs and proposals.</p>
+          <p class="text-sm">admin@idarttechnologies.com</p>
+          <a href="mailto:admin@idarttechnologies.com" class="btn btn-outline-glass btn-sm mt-4">Send Email</a>
+        </div>
+        <div class="contact-method-card reveal-up delay-100">
+          <h3>PHONE</h3>
+          <p class="text-sm text-muted mb-4">Call us during working hours for quick questions.</p>
+          <p class="text-sm">+91 96299 64399</p>
+          <a href="tel:+919629964399" class="btn btn-outline-glass btn-sm mt-4">Call Now</a>
+        </div>
+        <div class="contact-method-card reveal-up delay-200">
+          <h3>WHATSAPP</h3>
+          <p class="text-sm text-muted mb-4">The fastest way to reach us for quick queries.</p>
+          <p class="text-sm">+91 96299 64399</p>
+          <a href="https://wa.me/919629964399" class="btn btn-outline-glass btn-sm mt-4">Open WhatsApp</a>
+        </div>
+        <div class="contact-method-card reveal-up delay-300">
+          <h3>VISIT US</h3>
+          <p class="text-sm text-muted mb-4">Coimbatore HQ. Walk-ins welcome Mon – Sat.</p>
+          <p class="text-sm">SF-No-350, AGTRS Idart Building, Coimbatore.</p>
+          <a href="#offices" class="btn btn-outline-glass btn-sm mt-4">View Offices</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="mt-32 relative reveal-up" id="form">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">START A PROJECT</span>
+          <h2 class="section-title">Tell Us About Your <span class="text-gradient">Project.</span></h2>
+          <p class="section-desc">Fill in the form and we'll come back with a tailored proposal, timeline and technology recommendation — within 24 hours.</p>
+          
+          <div class="glass-card mt-8 reveal-up delay-100">
+            <h4 class="mb-4">Prefer WhatsApp?</h4>
+            <p class="text-sm text-muted">Send us a message directly — most queries answered within 2 hours.</p>
+            <a href="https://wa.me/919629964399" class="btn btn-primary-glow mt-6">Chat on WhatsApp</a>
+          </div>
+        </div>
+        
+        <div class="service-visual reveal-up delay-100">
+          <div class="contact-form glass-card" style="width: 100%;">
+            <form id="leadForm">
+              <div class="form-row flex gap-4">
+                <div class="flex-1">
+                  <label>Full Name *</label>
+                  <input id="fname" required class="glass-input" placeholder="Raj Kumar" />
+                </div>
+                <div class="flex-1">
+                  <label>Company / Business</label>
+                  <input id="fcompany" class="glass-input" placeholder="Raj Enterprises (optional)" />
+                </div>
+              </div>
+              <div class="form-row flex gap-4 mt-4">
+                <div class="flex-1">
+                  <label>Email Address *</label>
+                  <input id="femail" type="email" required class="glass-input" placeholder="raj@company.com" />
+                </div>
+                <div class="flex-1">
+                  <label>Phone / WhatsApp *</label>
+                  <input id="fphone" required class="glass-input" placeholder="+91 96299 64399" />
+                </div>
+              </div>
+              <div class="form-row flex gap-4 mt-4">
+                <div class="flex-1">
+                  <label>Service Needed *</label>
+                  <select id="fservice" required class="glass-input">
+                    <option value="">Select a service</option>
+                    <option>Web Development</option>
+                    <option>Mobile App Development</option>
+                    <option>Custom Software</option>
+                    <option>ERP / CRM Solution</option>
+                    <option>IoT & Automation</option>
+                    <option>Digital Marketing</option>
+                  </select>
+                </div>
+                <div class="flex-1">
+                  <label>Estimated Budget</label>
+                  <select id="fbudget" class="glass-input">
+                    <option value="">Select budget range</option>
+                    <option>₹25,000 - ₹50,000</option>
+                    <option>₹50,000 - ₹1,50,000</option>
+                    <option>₹1,50,000 - ₹5,00,000</option>
+                    <option>₹5,00,000+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mt-4">
+                <label>Tell us about your project *</label>
+                <textarea id="fmessage" rows="4" required class="glass-input" placeholder="Describe your project goals, problem, and timeline..."></textarea>
+              </div>
+              <div class="mt-6">
+                <button class="btn btn-primary-glow w-full" type="submit">Send Message</button>
+              </div>
+              <p id="status" class="mt-4 text-sm text-center"></p>
+              <p class="text-xs text-muted text-center mt-2">🔒 Your information is secure and never shared with third parties.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section relative reveal-up">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">BEFORE YOU WRITE</span>
+        <h2 class="section-title">Quick Answers to <span class="text-gradient">Common Questions.</span></h2>
+      </div>
+      <div class="faq-grid mt-12">
+        <div class="faq-item reveal-up">
+          <h4>How quickly do you respond to enquiries?</h4>
+          <p class="text-sm text-muted">We respond to all email and form enquiries within 24 hours on working days. WhatsApp is typically faster (2 hours).</p>
+        </div>
+        <div class="faq-item reveal-up delay-100">
+          <h4>Do you work with clients outside Tamil Nadu?</h4>
+          <p class="text-sm text-muted">Absolutely. We deliver projects across 18 Indian states and serve international clients via remote collaboration.</p>
+        </div>
+        <div class="faq-item reveal-up">
+          <h4>What's the minimum project budget you accept?</h4>
+          <p class="text-sm text-muted">Our minimum engagement is typically ₹25,000 for small sites. ERP and custom software start from ₹1,50,000.</p>
+        </div>
+        <div class="faq-item reveal-up delay-100">
+          <h4>Will I get a proposal before paying anything?</h4>
+          <p class="text-sm text-muted">Yes. Every enquiry gets a free scoping call followed by a detailed written proposal before any payment is required.</p>
+        </div>
+        <div class="faq-item reveal-up">
+          <h4>Can I visit your office for a meeting?</h4>
+          <p class="text-sm text-muted">Yes, walk-ins are welcome at our Coimbatore HQ. We recommend calling ahead to confirm availability.</p>
+        </div>
+        <div class="faq-item reveal-up delay-100">
+          <h4>How do I know which service I need?</h4>
+          <p class="text-sm text-muted">Don't worry — just describe your business problem and we'll recommend the right solution during our free call.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONAL OFFICES -->
+    <section id="offices" class="mb-32 relative reveal-up">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">OUR LOCATIONS</span>
+        <h2 class="section-title">Where You Can <span class="text-gradient">Find Us.</span></h2>
+      </div>
+      <div class="office-grid mt-12">
+        <div class="office-card reveal-up">
+          <h4>Coimbatore HQ</h4>
+          <address>SF-No-350, AGTRS Idart Building, 3rd Floor, Marudhamalai Main Road, Mullai Nagar, Coimbatore - 641041.</address>
+        </div>
+        <div class="office-card reveal-up delay-100">
+          <h4>Vadavalli Office</h4>
+          <address>No-18 - Second Street, Om Ganesh Nagar, Vadavalli, Coimbatore - 641041.</address>
+        </div>
+        <div class="office-card reveal-up delay-200">
+          <h4>Chennai Office</h4>
+          <address>2nd Street, S.Kulathur, Kovilambakkam, Chennai - 600129.</address>
+        </div>
+        <div class="office-card reveal-up">
+          <h4>Trichy Office</h4>
+          <address>SF No-4 - Fourth Street, Grand Residency, Raja Colony, Trichy - 620001.</address>
+        </div>
+        <div class="office-card reveal-up delay-100">
+          <h4>Tirunelveli Office</h4>
+          <address>No-586, KTC Nagar, Maharajanagar PO, Tirunelveli - 627011.</address>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section mb-32 relative reveal-up">
+      <div class="glass-card text-center relative overflow-hidden">
+        <h2 class="section-title">Don't Let Your Project <span class="text-gradient">Wait Any Longer.</span></h2>
+        <p class="section-desc mx-auto mt-4 mb-8">Every day without the right technology is a day your competitors are pulling ahead. Let's change that.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="#form" class="btn btn-primary-glow btn-lg">Start a Project</a>
+          <a href="idart-services.html" class="btn btn-outline-glass btn-lg">Explore Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+  document.getElementById('leadForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const payload = {
+      name: document.getElementById('fname').value.trim(),
+      company: document.getElementById('fcompany').value.trim(),
+      email: document.getElementById('femail').value.trim(),
+      phone: document.getElementById('fphone').value.trim(),
+      service: document.getElementById('fservice').value,
+      budget: document.getElementById('fbudget').value,
+      message: document.getElementById('fmessage').value.trim(),
+      page: 'idart-contact.html'
+    };
+    const status = document.getElementById('status');
+    try {
+      const res = await fetch('/api/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+      if(!res.ok) throw new Error('Failed');
+      status.textContent = 'Enquiry submitted successfully. We will contact you within 24 hours.';
+      status.style.color = '#10b981';
+      e.target.reset();
+    } catch {
+      status.textContent = 'Could not submit right now. Please WhatsApp us at +91 96299 64399.';
+      status.style.color = '#ef4444';
+    }
+  });
+  </script>
+  <script src="assets/components.js"></script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>

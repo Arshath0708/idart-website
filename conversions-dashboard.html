@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Dashboard | iDart Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/premium-home.css" />
+  <style>
+    .dashboard-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 2rem; }
+    .data-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .data-label { font-size: 0.75rem; color: #a6b3d1; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+    .data-value { font-size: 1.8rem; font-weight: 700; font-family: 'Syne', sans-serif; }
+    .table-container { margin-top: 2rem; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { text-align: left; padding: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.9rem; }
+    th { color: #a6b3d1; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
+    .trend-up { color: #10b981; }
+    .trend-down { color: #ef4444; }
+    .controls { display: flex; gap: 0.5rem; align-items: center; }
+    .btn-sm { padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 6px; }
+    .btn-sm.active { background: var(--accent-secondary); color: #fff; }
+
+    /* Login Overlay */
+    #login-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--bg-color);
+      z-index: 9999;
+      display: none; /* Controlled by JS */
+      align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .login-card {
+      width: 100%; max-width: 420px;
+      padding: 3rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      text-align: left;
+      backdrop-filter: blur(20px);
+    }
+    .login-card h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .login-card p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem; }
+    .login-error { color: #ef4444; font-size: 0.85rem; margin-top: 1rem; display: none; }
+  </style>
+</head>
+<body>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Login Overlay -->
+  <div id="login-overlay">
+    <div class="login-card reveal-up active">
+      <div class="badge glass-badge mb-4">RESTRICTED ACCESS</div>
+      <h2>Internal <span class="text-gradient">Analytics</span></h2>
+      <p>Please enter your credentials to access the iDart Technologies conversion dashboard.</p>
+      
+      <form id="loginForm">
+        <div class="mb-4">
+          <label>Admin Username</label>
+          <input type="text" id="username" class="glass-input" required placeholder="Enter ID" />
+        </div>
+        <div class="mb-6">
+          <label>Password</label>
+          <input type="password" id="password" class="glass-input" required placeholder="••••••••" />
+        </div>
+        <button type="submit" class="btn btn-primary-glow w-full">Sign In ✦</button>
+        <p id="loginError" class="login-error">Invalid username or password. Please try again.</p>
+      </form>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <nav class="container">
+      <a class="logo" href="idart-landing.html"><img src="assets/idart-logo-header.png" alt="idart Technologies" /></a>
+      <div class="nav-links">
+        <a href="idart-landing.html">Home</a>
+        <a href="idart-services.html">Services</a>
+        <a href="idart-products.html">Products</a>
+        <a href="idart-pricing.html">Pricing</a>
+        <a href="idart-about.html">About</a>
+        <a href="idart-contact.html">Contact</a>
+      </div>
+      <div class="controls">
+        <button class="btn btn-glow btn-sm active" data-range="7d">7D</button>
+        <button class="btn btn-glow btn-sm" data-range="30d">30D</button>
+        <button id="refresh" class="btn btn-primary-glow btn-sm">Refresh</button>
+        <button id="logout" class="btn btn-outline-glass btn-sm" style="border-color: rgba(239, 68, 68, 0.2); color: #ef4444;">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding: 4rem 0;">
+    <div class="section-header">
+      <span class="section-eyebrow">Internal Dashboard</span>
+      <h2 class="section-title">Conversion <span class="text-gradient">Analytics</span></h2>
+      <p class="section-desc">Real-time performance tracking and lead generation data.</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="data-card">
+        <div class="data-label">Unique Visitors</div>
+        <div id="uniqueVisitors" class="data-value">-</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">Page Views</div>
+        <div id="pageViews" class="data-value">-</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">CTA Clicks</div>
+        <div id="ctaClicks" class="data-value">-</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">Leads Generated</div>
+        <div id="leads" class="data-value">-</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">Conversion Rate</div>
+        <div id="conversionRate" class="data-value">-</div>
+      </div>
+    </div>
+
+    <div class="flex-row mt-12" style="align-items: flex-start; gap: 2rem;">
+      <div class="glass-card flex-1">
+        <div class="data-label">Recent Leads</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Phone</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="leadsBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="glass-card" style="width: 350px;">
+        <div class="data-label">Event Breakdown</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Event Type</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody id="eventsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="footer-left">
+      <a class="logo" href="idart-landing.html"><img src="assets/idart-logo-header.png" alt="idart Technologies" style="height: 40px;" /></a>
+      <p class="mt-4 text-muted">Conversion dashboard for idart Technologies internal use.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 iDart Technologies. All rights reserved.</p>
+      <p>A Division of AGTRS IDART PRIVATE LIMITED</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentRange = "7d";
+    let authHeader = localStorage.getItem("idart_analytics_auth");
+
+    function fmtDate(v) {
+      const d = new Date(v);
+      return d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    async function loadDashboard() {
+      if (!authHeader) {
+        showLogin();
+        return;
+      }
+      
+      try {
+        const [convRes, leadsRes] = await Promise.all([
+          fetch(`/api/conversions?range=${currentRange}`, { headers: { "Authorization": authHeader } }),
+          fetch(`/api/leads?limit=20`, { headers: { "Authorization": authHeader } })
+        ]);
+        
+        if (convRes.status === 401 || leadsRes.status === 401) {
+           authHeader = null;
+           localStorage.removeItem("idart_analytics_auth");
+           showLogin();
+           return;
+        }
+
+        const conv = await convRes.json();
+        const leadsData = await leadsRes.json();
+
+        document.getElementById("uniqueVisitors").textContent = conv.totals.uniqueVisitors;
+        document.getElementById("pageViews").textContent = conv.totals.pageViews;
+        document.getElementById("ctaClicks").textContent = conv.totals.ctaClicks;
+        document.getElementById("leads").textContent = conv.totals.leads;
+        document.getElementById("conversionRate").textContent = conv.totals.conversionRate + "%";
+
+        const leadsBody = document.getElementById("leadsBody");
+        leadsBody.innerHTML = "";
+        leadsData.leads.forEach((lead) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${lead.name}</td>
+            <td style="color:var(--accent-secondary)">${lead.service}</td>
+            <td style="font-family: monospace;">${lead.phone}</td>
+            <td style="color:#a6b3d1; font-size:0.8rem;">${fmtDate(lead.createdAt)}</td>
+          `;
+          leadsBody.appendChild(tr);
+        });
+
+        const eventsBody = document.getElementById("eventsBody");
+        eventsBody.innerHTML = "";
+        Object.entries(conv.eventsByType).forEach(([type, count]) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td>${type}</td><td style="font-weight:700;">${count}</td>`;
+          eventsBody.appendChild(tr);
+        });
+        
+        hideLogin();
+      } catch (err) {
+        console.error("Failed to load dashboard data", err);
+      }
+    }
+
+    function showLogin() {
+      document.getElementById("login-overlay").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function hideLogin() {
+      document.getElementById("login-overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const token = "Basic " + btoa(user + ":" + pass);
+      const errorEl = document.getElementById("loginError");
+      
+      errorEl.style.display = "none";
+      
+      try {
+        const res = await fetch("/api/conversions?range=24h", { headers: { "Authorization": token } });
+        if (res.ok) {
+          authHeader = token;
+          localStorage.setItem("idart_analytics_auth", token);
+          loadDashboard();
+        } else {
+          errorEl.style.display = "block";
+        }
+      } catch (err) {
+        errorEl.style.display = "block";
+      }
+    });
+
+    document.getElementById("logout").addEventListener("click", () => {
+      authHeader = null;
+      localStorage.removeItem("idart_analytics_auth");
+      showLogin();
+    });
+
+    document.querySelectorAll("[data-range]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("[data-range]").forEach((x) => x.classList.remove("active"));
+        btn.classList.add("active");
+        currentRange = btn.dataset.range;
+        loadDashboard();
+      });
+    });
+
+    document.getElementById("refresh").addEventListener("click", loadDashboard);
+    
+    // Initial load
+    if (!authHeader) {
+      showLogin();
+    } else {
+      loadDashboard();
+    }
+    
+    // Explicitly add loaded class to body to fix the "blank page" (opacity: 0) issue
+    setTimeout(() => { document.body.classList.add('loaded'); }, 100);
+  </script>
+  <script src="assets/components.js"></script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | iDart Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/premium-home.css" />
+  <style>
+    .product-section { padding: 5rem 0; border-bottom: 1px solid var(--glass-border); }
+    .product-section:last-child { border-bottom: none; }
+    .product-grid-main { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .product-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; transition: transform 0.3s ease, background 0.3s ease; display: flex; flex-direction: column; }
+    .product-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
+    .product-status { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #10b981; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; }
+    .product-status::before { content: ''; width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite; }
+    .feature-list-sm { list-style: none; padding: 0; margin-top: 1.5rem; }
+    .feature-list-sm li { font-size: 0.85rem; color: #a6b3d1; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .feature-list-sm li::before { content: '✦'; color: var(--accent-secondary); font-size: 0.7rem; }
+    .stats-grid-mini { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: auto; padding-top: 1.5rem; }
+    .stat-mini { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.8rem; text-align: center; }
+    .stat-mini b { display: block; font-size: 1.2rem; color: var(--text-primary); }
+    .stat-mini span { font-size: 0.6rem; color: var(--text-secondary); text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+  <!-- Navigation -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge glass-badge">4 PRODUCT DOMAINS · REAL-WORLD SOLUTIONS</div>
+        <h1 class="hero-title">Innovative <span class="text-gradient">Products</span> Built for Real-World Problems.</h1>
+        <p class="hero-subtitle">From smart IoT energy management to cloud-based school ERP — every product we ship is designed to eliminate a real pain point.</p>
+        <div class="hero-actions reveal-up delay-200">
+          <a class="btn btn-primary-glow" href="idart-contact.html">Request a Demo</a>
+          <a class="btn btn-outline-glass" href="#featured">Explore Products</a>
+        </div>
+        
+        <div class="marquee-wrapper mt-12 reveal-up delay-300" style="border:none; background:transparent;">
+          <div class="marquee">
+            <span>Power IoT ✦ School ERP ✦ Inventory ✦ Billing ✦ HR Suite ✦ SaaS ✦ AI ✦ Gold CRM ✦ AlphaBooks ✦ GuestXpo ✦ Hive ✦</span>
+            <span>Power IoT ✦ School ERP ✦ Inventory ✦ Billing ✦ HR Suite ✦ SaaS ✦ AI ✦ Gold CRM ✦ AlphaBooks ✦ GuestXpo ✦ Hive ✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCT -->
+    <section id="featured" class="product-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">FEATURED PRODUCT · IoT HARDWARE + SOFTWARE</span>
+          <h2 class="section-title">Power Manager IoT — <span class="text-gradient">Control Your Energy Bill.</span></h2>
+          <p class="section-desc">Electricity costs rising uncontrollably? Power Manager IoT gives you complete visibility and control. Monitor, automate and optimize every electrical load across your facility.</p>
+          
+          <div class="mt-8 grid-2 reveal-up delay-100">
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Real-Time Energy Monitoring</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Smart Automation & Scheduling</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Instant Overload Alerts</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Centralised Management Dashboard</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Cost Optimization Reports</span></div>
+          </div>
+
+          <div class="stats-row mt-8 reveal-up delay-200">
+            <div class="stat-box"><b>30%</b><span>Energy Saved</span></div>
+            <div class="stat-box"><b>Live</b><span>Data Stream</span></div>
+            <div class="stat-box"><b>24/7</b><span>Monitoring</span></div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Request a Demo</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%;">
+             <h3 class="text-gradient">Who Uses It?</h3>
+             <ul class="feature-list mt-4">
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Schools:</strong> Classroom-by-classroom control.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Factories:</strong> Reduce peak load penalties.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Colleges:</strong> Dept-wise billing allocation.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Homes:</strong> Smart living with app control.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- READY-TO-DEPLOY SOFTWARE -->
+    <section class="product-section relative">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">SOFTWARE PRODUCTS</span>
+        <h2 class="section-title">Ready-to-Deploy <span class="text-gradient">Solutions.</span></h2>
+        <p class="section-desc mx-auto">Production-ready software that can be deployed in days, not months. White-labeled and fully customizable.</p>
+      </div>
+
+      <div class="product-grid-main mt-12">
+        <!-- Rottukada -->
+        <div class="product-card reveal-up">
+          <div class="product-status">LIVE</div>
+          <h3>Rottukada – GST Billing</h3>
+          <p class="text-muted mt-2 text-sm">Manage invoices, track payments, and generate reports with complete financial control.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> GST Billing Mobile App</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time Growth Analytics</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Easy Payment Tracking</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Mobile</b><span>App</span></div>
+            <div class="stat-mini"><b>GST</b><span>Ready</span></div>
+          </div>
+        </div>
+        <!-- Thattukada -->
+        <div class="product-card reveal-up delay-100">
+          <div class="product-status">LIVE</div>
+          <h3>Thattukada – Simple Billing</h3>
+          <p class="text-muted mt-2 text-sm">Lightweight non-GST billing solution designed for local vendors and street businesses.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Non-GST Quick Billing</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily Sales Tracking</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Designed for Local Vendors</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Easy</b><span>Billing</span></div>
+            <div class="stat-mini"><b>Local</b><span>Vendors</span></div>
+          </div>
+        </div>
+        <!-- School ERP -->
+        <div class="product-card reveal-up delay-200">
+          <div class="product-status">LIVE</div>
+          <h3>School Management ERP</h3>
+          <p class="text-muted mt-2 text-sm">Complete digital school platform — from admissions to results and parent portals.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fee & Admission Funnels</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Timetable & Result Mgmt</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Staff & Parent Portals</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Admissions</b><span>Ready</span></div>
+            <div class="stat-mini"><b>Parent</b><span>Portal</span></div>
+          </div>
+        </div>
+        <!-- AlphaBooks -->
+        <div class="product-card reveal-up">
+          <div class="product-status">LIVE</div>
+          <h3>AlphaBooks – Accounting</h3>
+          <p class="text-muted mt-2 text-sm">Complete business accounting — Quotations to Invoices, Purchase Orders, and Stock tracking.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Full Inventory Tracking</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Detailed Financial Reports</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Price History & Trends</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Full</b><span>Inventory</span></div>
+            <div class="stat-mini"><b>Report</b><span>Heavy</span></div>
+          </div>
+        </div>
+        <!-- HR Suite -->
+        <div class="product-card reveal-up delay-100">
+          <div class="product-status">LIVE</div>
+          <h3>HR & Payroll Suite</h3>
+          <p class="text-muted mt-2 text-sm">End-to-end HR management — onboarding, leave, and payroll with ESI/PF compliance.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Automated Payslips</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Attendance & Compliance</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> ESI / PF Ready</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Payroll</b><span>Auto</span></div>
+            <div class="stat-mini"><b>ESI/PF</b><span>Ready</span></div>
+          </div>
+        </div>
+        <!-- Hive -->
+        <div class="product-card reveal-up delay-200">
+          <div class="product-status">LIVE</div>
+          <h3>Hive – Staff & Projects</h3>
+          <p class="text-muted mt-2 text-sm">Smart staff management to assign tasks, track progress, and manage project expenses.</p>
+          <ul class="feature-list-sm mt-4">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Task & Progress Tracking</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Project Expense Mgmt</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time Collaboration</li>
+          </ul>
+          <div class="stats-grid-mini">
+            <div class="stat-mini"><b>Task</b><span>Mgmt</span></div>
+            <div class="stat-mini"><b>Staff</b><span>Tracking</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEB APPLICATIONS / SAAS -->
+    <section class="product-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">WEB APPLICATIONS</span>
+          <h2 class="section-title">Platform-Scale <span class="text-gradient">SaaS Dashboard.</span></h2>
+          <p class="section-desc">Architected for multi-tenant scale, subscription revenue and superior user experience. Built for your next 10,000 users.</p>
+          
+          <div class="mt-8 grid-2 reveal-up delay-100">
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Multi-tenant SaaS Architecture</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Booking & Resource Management</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Marketplace Vendor Portals</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Branded Customer Self-Service</span></div>
+          </div>
+
+          <div class="stats-row mt-8 reveal-up delay-200">
+            <div class="stat-box"><b>18k+</b><span>Scalable Users</span></div>
+            <div class="stat-box"><b>API</b><span>First Design</span></div>
+            <div class="stat-box"><b>Live</b><span>Analytics</span></div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%;">
+             <h3 class="text-gradient">SaaS Ready</h3>
+             <ul class="feature-list mt-4">
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Subscription billing integration.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Marketplace platforms.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Dispute resolution systems.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA INTELLIGENCE -->
+    <section class="product-section relative">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">DATA ANALYSIS</span>
+        <h2 class="section-title">Turn Raw Data Into <span class="text-gradient">Decisions That Win.</span></h2>
+        <p class="section-desc mx-auto">Extract meaningful patterns and translate complex numbers into clear, actionable strategies.</p>
+      </div>
+      
+      <div class="grid-3 mt-12">
+        <div class="glass-card reveal-up">
+          <h4>Retail & Sales</h4>
+          <p class="mt-4 text-muted text-sm">Track product performance, buying patterns, and seasonal trends across all channels.</p>
+        </div>
+        <div class="glass-card reveal-up delay-100">
+          <h4>Energy & IoT</h4>
+          <p class="mt-4 text-muted text-sm">Deep-dive into Power Manager IoT data to identify waste patterns and save costs.</p>
+        </div>
+        <div class="glass-card reveal-up delay-200">
+          <h4>HR & Workforce</h4>
+          <p class="mt-4 text-muted text-sm">Understand attendance patterns, attrition risk, and productivity metrics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND EXPANSION -->
+    <section class="product-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">BRAND EXPANSION</span>
+          <h2 class="section-title">From Logo to Launch — <span class="text-gradient">Your Foundation.</span></h2>
+          <p class="section-desc">From choosing the right place to building a strong visual identity, we establish and grow your brand with confidence.</p>
+          
+          <div class="mt-8 grid-2 reveal-up delay-100">
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Logo & Identity Design</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Place Selection Guidance</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Brand Positioning & Market Strategy</span></div>
+            <div class="feature-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Physical & Digital Presence Setup</span></div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Start Your Brand Journey</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%;">
+             <h3 class="text-gradient">Business Setup</h3>
+             <ul class="feature-list mt-4">
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Signage & Visual Branding.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Launch Planning & Promotion.</li>
+               <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;"><polyline points="20 6 9 17 4 12"></polyline></svg> Ongoing Growth Support.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIGITAL MARKETING -->
+    <section class="product-section relative">
+      <div class="section-header text-center reveal-up">
+        <span class="section-eyebrow">DIGITAL MARKETING</span>
+        <h2 class="section-title">Marketing That Drives <span class="text-gradient">Real Revenue.</span></h2>
+        <p class="section-desc mx-auto">Ads that convert. Every rupee tracked. Every lead accountable. Measurable business outcomes.</p>
+      </div>
+      
+      <div class="grid-3 mt-12">
+        <div class="glass-card reveal-up">
+          <h4>Google Ads</h4>
+          <p class="mt-4 text-muted text-sm">Search, Display, YouTube and Shopping campaigns optimised for ROI.</p>
+        </div>
+        <div class="glass-card reveal-up delay-100">
+          <h4>Meta Ads</h4>
+          <p class="mt-4 text-muted text-sm">Instagram and Facebook funnels built to capture your market.</p>
+        </div>
+        <div class="glass-card reveal-up delay-200">
+          <h4>WhatsApp API</h4>
+          <p class="mt-4 text-muted text-sm">Automated outreach for lead nurturing and re-engagement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section mt-32 mb-32 relative reveal-up">
+      <div class="glass-card text-center relative overflow-hidden">
+        <h2 class="section-title">See It Running. <span class="text-gradient">Live. Today.</span></h2>
+        <p class="section-desc mx-auto mt-4 mb-8">Every product has a live demo environment ready. Tell us which product interests you for a walkthrough.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="idart-contact.html" class="btn btn-primary-glow btn-lg">Request a Demo</a>
+          <a href="idart-contact.html" class="btn btn-outline-glass btn-lg">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/components.js"></script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>

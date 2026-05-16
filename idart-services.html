@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | iDart Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/premium-home.css" />
+  <style>
+    .service-detail-section { padding: 5rem 0; border-bottom: 1px solid var(--glass-border); }
+    .service-detail-section:last-child { border-bottom: none; }
+    .feature-check { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem; color: #dde4f8; font-size: 0.95rem; }
+    .feature-check svg { width: 20px; height: 20px; color: var(--accent-secondary); flex-shrink: 0; margin-top: 2px; }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+    .stat-box { background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1.2rem; text-align: center; }
+    .stat-box b { display: block; font-size: 1.5rem; font-family: 'Syne', sans-serif; color: var(--text-primary); }
+    .stat-box span { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+    .service-visual { flex: 1; display: flex; justify-content: center; align-items: center; }
+    .service-content { flex: 1.2; }
+    .reverse { flex-direction: row-reverse; }
+    @media (max-width: 1024px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .flex-row { flex-direction: column !important; }
+    }
+  </style>
+  <script src="assets/components.js" defer></script>
+</head>
+<body>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+  <!-- Navigation -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge glass-badge">10 SERVICE DOMAINS · 1187+ PROJECTS DELIVERED</div>
+        <h1 class="hero-title">Complete <span class="text-gradient">Technology</span> Solutions for Modern Businesses.</h1>
+        <p class="hero-subtitle">From your first website to a fully automated enterprise platform — every technology layer your business needs, engineered under one roof.</p>
+        <div class="hero-actions reveal-up delay-200">
+          <a class="btn btn-primary-glow" href="idart-contact.html">Start a Project</a>
+          <a class="btn btn-outline-glass" href="#development">Explore Platform Services</a>
+        </div>
+        
+        <div class="marquee-wrapper mt-12 reveal-up delay-300" style="border:none; background:transparent;">
+          <div class="marquee">
+            <span>Web Dev ✦ Mobile ✦ ERP ✦ CRM ✦ Custom ✦ IoT ✦ E-Com ✦ AI & Data ✦ Maintenance ✦ SEO ✦</span>
+            <span>Web Dev ✦ Mobile ✦ ERP ✦ CRM ✦ Custom ✦ IoT ✦ E-Com ✦ AI & Data ✦ Maintenance ✦ SEO ✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEBSITE DEVELOPMENT -->
+    <section id="development" class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">WEBSITE DEVELOPMENT</span>
+          <h2 class="section-title">Websites That <span class="text-gradient">Convert</span></h2>
+          <p class="section-desc">Your website is your most powerful salesperson — available 24/7. We design and engineer websites that don’t just look stunning; they load fast, rank high, and convert visitors into enterprise leads.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Business Portals — Multi-page, branded platforms that build credibility.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Landing Pages — High-conversion pages focused on campaigns and leads.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Search-Optimised Builds — Structured to rank higher and attract organic traffic.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Mobile-First Experience — Seamless performance across all devices.</span>
+            </div>
+          </div>
+
+          <div class="stats-row reveal-up delay-200">
+            <div class="stat-box"><b>99</b><span>PageSpeed Score</span></div>
+            <div class="stat-box"><b>2 wks</b><span>Avg Delivery</span></div>
+            <div class="stat-box"><b>3x</b><span>More Conversions</span></div>
+            <div class="stat-box"><b>25+</b><span>Devices Tested</span></div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">High Performance</h3>
+             <p class="mt-4 text-muted">Pixel-perfect builds that perform on Google and convert on landing.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">Business Sites</span>
+               <span class="badge glass-badge" style="margin:0">Landing Pages</span>
+               <span class="badge glass-badge" style="margin:0">SEO Builds</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILE APP DEVELOPMENT -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">MOBILE APP DEVELOPMENT</span>
+          <h2 class="section-title">Mobile Apps That <span class="text-gradient">Drive Growth.</span></h2>
+          <p class="section-desc">Mobile is where your customers live. We build cross-platform apps with native-quality performance — designed for intuitive experience and built for reliability at scale.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Android & iOS Apps — High-quality cross-platform applications.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Smooth & Responsive UI — Fast interfaces with deep device integration.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Business Applications — Internal tools and operational dashboards.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>System Integration — Seamless connection with existing business systems.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Cross Platform</h3>
+             <p class="mt-4 text-muted">Android & iOS from one codebase. Offline-capable architecture & push notifications.</p>
+             <div class="stats-row mt-6">
+                <div class="stat-box" style="padding:0.8rem"><b>App Store</b><span>Ready</span></div>
+                <div class="stat-box" style="padding:0.8rem"><b>Play Store</b><span>Ready</span></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ERP SOLUTIONS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">ERP SOLUTIONS</span>
+          <h2 class="section-title">Run Your Entire <span class="text-gradient">Business</span> From One System.</h2>
+          <p class="section-desc">Our custom ERP solutions unify every department under one intelligent platform — built specifically around how your business operates.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Inventory Management — Real-time stock tracking and purchase orders.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>HR & Payroll — Employee records, attendance, and compliance.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Finance & Accounting — GST invoicing and audit-ready ledgers.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Manufacturing ERP — Production planning and waste tracking.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Zero Chaos</h3>
+             <p class="mt-4 text-muted">Every department. One dashboard. Real-time reporting.</p>
+             <div class="stats-row mt-6">
+                <div class="stat-box" style="padding:0.8rem"><b>60%</b><span>Less Manual</span></div>
+                <div class="stat-box" style="padding:0.8rem"><b>GST</b><span>Compliant</span></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRM SYSTEMS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">CRM SYSTEMS</span>
+          <h2 class="section-title">Turn Leads Into <span class="text-gradient">Loyal Customers.</span></h2>
+          <p class="section-desc">Our custom CRM systems make sure no lead goes cold — automating follow-ups, tracking interactions, and giving you a clear pipeline view.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Lead Tracking — Capture leads from web, WhatsApp, and social media.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Sales Automation — Automated follow-up reminders and email sequences.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Customer Insights — Complete interaction history and timelines.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>WhatsApp Integration — Communicate with customers directly through CRM.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">40% More Closes</h3>
+             <p class="mt-4 text-muted">360° Customer View. Live Pipeline View. Auto Follow-ups.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">Lead Tracking</span>
+               <span class="badge glass-badge" style="margin:0">Automation</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM SOFTWARE -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">CUSTOM SOFTWARE</span>
+          <h2 class="section-title">Your Problem. Our <span class="text-gradient">Custom Solution.</span></h2>
+          <p class="section-desc">When off-the-shelf software doesn't fit your unique workflow, we engineer it from the ground up around your exact requirements.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Tailor-Made Solutions — Purpose-built systems designed for your logic.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Business Automation — Eliminate repetitive manual tasks and reporting.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Workflow Engine — Multi-step approval flows and task routing.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Legacy System Migration — Modernise outdated software seamlessly.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Tailor Made</h3>
+             <p class="mt-4 text-muted">Role-based access & audit logs. Seamless third-party integration.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">Automation</span>
+               <span class="badge glass-badge" style="margin:0">Integration</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E-COMMERCE SOLUTIONS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">E-COMMERCE SOLUTIONS</span>
+          <h2 class="section-title">Your Online Store, <span class="text-gradient">Built to Sell.</span></h2>
+          <p class="section-desc">We build e-commerce platforms that are fast, trustworthy and optimised for checkout conversion — with full backend control.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Custom Online Stores — Bespoke platforms built for your brand.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Shopify Integration — Expert setup and theme customisation.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Inventory Sync — Real-time stock management and low-stock alerts.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>GST & Invoicing — Automatic tax-compliant invoice generation.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">UPI Ready</h3>
+             <p class="mt-4 text-muted">18k+ Products. Razorpay. GST Auto Invoicing.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">Custom Store</span>
+               <span class="badge glass-badge" style="margin:0">Shopify</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IOT SOLUTIONS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">IOT SOLUTIONS</span>
+          <h2 class="section-title">Connect Your <span class="text-gradient">Physical World</span> to the Digital.</h2>
+          <p class="section-desc">We design and deploy complete IoT ecosystems — enabling real-time visibility and automation across your business.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Smart Device Solutions — Custom-built connected systems.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Automation Systems — Remote control and scheduled operations.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Real-Time Monitoring — Track environmental and energy data.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Live Dashboards — Visualize data through intuitive interfaces.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">30% Power Saved</h3>
+             <p class="mt-4 text-muted">Real-world sensors. Cloud intelligence. Total control.</p>
+             <div class="stats-row mt-6">
+                <div class="stat-box" style="padding:0.8rem"><b>Live</b><span>Streaming</span></div>
+                <div class="stat-box" style="padding:0.8rem"><b>24/7</b><span>Monitoring</span></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI & DATA SYSTEMS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">AI & DATA SYSTEMS</span>
+          <h2 class="section-title">Make Every Decision <span class="text-gradient">Data-Driven.</span></h2>
+          <p class="section-desc">We build intelligent systems that transform raw data into actionable insights, automate decisions and give you a real competitive edge.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Analytics Dashboards — Visibility into KPIs and trends.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Intelligent Automation — Smart systems that learn and improve.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Predictive Intelligence — Forecast demand and optimize operations.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Unified Data Systems — Consolidated organization-wide data.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Predictive Intelligence</h3>
+             <p class="mt-4 text-muted">Custom analytics dashboards. AI-powered task automation.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">Analytics</span>
+               <span class="badge glass-badge" style="margin:0">AI Automation</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAINTENANCE & SUPPORT -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">MAINTENANCE & SUPPORT</span>
+          <h2 class="section-title">Your Technology, <span class="text-gradient">Always Running.</span></h2>
+          <p class="section-desc">Our AMC and support plans ensure your systems stay fast, secure and perfectly aligned with your operations.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Annual Maintenance Contracts (AMC) — Predictable monthly support.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Feature Updates — Ongoing development as your business evolves.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>24/7 Uptime Monitoring — We know before you do if something fails.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Security Patching — Regular vulnerability assessments and testing.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Support Plan</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">99.9% Uptime</h3>
+             <p class="mt-4 text-muted">Direct Engineer Access. <4hr Response Time.</p>
+             <div class="stats-row mt-6">
+                <div class="stat-box" style="padding:0.8rem"><b>24/7</b><span>Monitoring</span></div>
+                <div class="stat-box" style="padding:0.8rem"><b>Direct</b><span>Access</span></div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALIZED BUSINESS SYSTEMS -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">SPECIALIZED BUSINESS SYSTEMS</span>
+          <h2 class="section-title">Industry-Specific <span class="text-gradient">Management</span> Tools.</h2>
+          <p class="section-desc">Custom-engineered systems for niche industry requirements, ensuring every operational detail is digitized.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>School Management System — Admissions, fees, attendance and academic tracking.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Inventory & Billing System — Retail and wholesale solutions with rapid billing.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Factory Automation — Intelligent machine monitoring and production oversight.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Franchise / Partnership — Secure portals for scaling your business network.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get a Quote</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Operational Excellence</h3>
+             <p class="mt-4 text-muted">Bespoke tools for specific industry workflows.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">School Management</span>
+               <span class="badge glass-badge" style="margin:0">Billing</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO & DIGITAL GROWTH -->
+    <section class="service-detail-section relative reveal-up">
+      <div class="flex-row reverse">
+        <div class="service-content reveal-up">
+          <span class="section-eyebrow">SEO & DIGITAL GROWTH</span>
+          <h2 class="section-title">Rank Higher. <span class="text-gradient">Grow Faster.</span></h2>
+          <p class="section-desc">We combine technical SEO, content strategy and performance optimisation to help your business rank higher on Google.</p>
+          
+          <div class="mt-8">
+            <div class="feature-check reveal-up delay-100">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Technical SEO — Page speed and structured data optimisation.</span>
+            </div>
+            <div class="feature-check reveal-up delay-200">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Local SEO — Google Business Profile and maps ranking.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Content Strategy — Blog planning and conversion-focused content.</span>
+            </div>
+            <div class="feature-check reveal-up delay-300">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Analytics & Tracking — Search Console and performance insights.</span>
+            </div>
+          </div>
+          <a href="idart-contact.html" class="btn btn-primary-glow mt-8 reveal-up delay-300">Get SEO Plan</a>
+        </div>
+        <div class="service-visual reveal-up delay-100">
+          <div class="glass-card" style="width: 100%; text-align: center;">
+             <h3 class="text-gradient">Top 10 Rank</h3>
+             <p class="mt-4 text-muted">3x Traffic Growth. Organic Leads. Long-term ROI.</p>
+             <div class="mt-6 flex gap-4 justify-center flex-wrap">
+               <span class="badge glass-badge" style="margin:0">SEO</span>
+               <span class="badge glass-badge" style="margin:0">Analytics</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section mt-32 mb-32 relative reveal-up">
+      <div class="glass-card text-center relative overflow-hidden">
+        <h2 class="section-title">Ready to Engineer Your <span class="text-gradient">Growth?</span></h2>
+        <p class="section-desc mx-auto mt-4 mb-8">Tell us what you need. We'll design a solution that fits your budget, timeline and business goals.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="idart-contact.html" class="btn btn-primary-glow btn-lg">Start a Project</a>
+          <a href="idart-pricing.html" class="btn btn-outline-glass btn-lg">View Pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/components.js"></script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>
