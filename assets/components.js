@@ -22,6 +22,27 @@ async function loadComponents() {
         }
       });
 
+      // Mobile Menu Toggle
+      const mobileToggle = headerPlaceholder.querySelector('#mobile-menu-toggle');
+      const mobileNav = headerPlaceholder.querySelector('.nav-links');
+      
+      if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', () => {
+          mobileToggle.classList.toggle('open');
+          mobileNav.classList.toggle('open');
+          document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : 'auto';
+        });
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileToggle.classList.remove('open');
+            mobileNav.classList.remove('open');
+            document.body.style.overflow = 'auto';
+          });
+        });
+      }
+
       // Sticky Header Logic
       const topbar = headerPlaceholder.querySelector('.topbar');
       if (topbar) {
