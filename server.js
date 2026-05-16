@@ -7,7 +7,10 @@ const PORT = Number(process.env.PORT) || 3000;
 const ANALYTICS_USER = process.env.ANALYTICS_USER || "admin";
 const ANALYTICS_PASS = process.env.ANALYTICS_PASS || "spid#";
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
+
+// Vercel handling: Use /tmp for data storage if in serverless env
+const IS_VERCEL = process.env.VERCEL === "1";
+const DATA_DIR = IS_VERCEL ? path.join("/tmp", "data") : path.join(ROOT, "data");
 const EVENTS_FILE = path.join(DATA_DIR, "events.json");
 const LEADS_FILE = path.join(DATA_DIR, "leads.json");
 
@@ -199,32 +202,36 @@ app.get("/analytics", (_, res) => {
 });
 
 ensureDataFiles();
-function startServer(preferredPort, maxAttempts = 10) {
-  let attempt = 0;
-  let currentPort = preferredPort;
 
-  const tryListen = () => {
-    const server = app.listen(currentPort, () => {
-      console.log(`Conversion backend running: http://localhost:${currentPort}`);
-      if (currentPort !== preferredPort) {
-        console.log(`Preferred port ${preferredPort} was busy, using ${currentPort} instead.`);
-      }
-    });
+if (!IS_VERCEL) {
+  function startServer(preferredPort, maxAttempts = 10) {
+    let attempt = 0;
+    let currentPort = preferredPort;
 
-    server.on("error", (error) => {
-      if (error.code === "EADDRINUSE" && attempt < maxAttempts) {
-        attempt += 1;
-        currentPort += 1;
-        console.warn(`Port busy, retrying on ${currentPort}...`);
-        tryListen();
-        return;
-      }
-      console.error("Failed to start server:", error.message);
-      process.exit(1);
-    });
-  };
+    const tryListen = () => {
+      const server = app.listen(currentPort, () => {
+        console.log(`Conversion backend running: http://localhost:${currentPort}`);
+        if (currentPort !== preferredPort) {
+          console.log(`Preferred port ${preferredPort} was busy, using ${currentPort} instead.`);
+        }
+      });
 
-  tryListen();
+      server.on("error", (error) => {
+        if (error.code === "EADDRINUSE" && attempt < maxAttempts) {
+          attempt += 1;
+          currentPort += 1;
+          console.warn(`Port busy, retrying on ${currentPort}...`);
+          tryListen();
+          return;
+        }
+        console.error("Failed to start server:", error.message);
+        process.exit(1);
+      });
+    };
+
+    tryListen();
+  }
+  startServer(PORT);
 }
 
-startServer(PORT);
+module.exports = app;
